@@ -15,6 +15,12 @@
 	}
 }
 
+@media (max-width: 1440px) {
+	.basket__front{
+		width: 45vw;
+	}
+}
+
 @media (max-width: 1200px) {
 	.tools__item{
 		margin: 0;
@@ -25,6 +31,9 @@
 	.catalog__item {
 		flex: 0 0 25%;
 		max-width: 25%;
+	}
+	.basket__front{
+		width: 55vw;
 	}
 
 }
@@ -44,6 +53,9 @@
 	.catalog__item {
 		flex: 0 0 33.333%;
 		max-width: 33.333%;
+	}
+	.basket__front{
+		width: 65vw;
 	}
 }
 @media (max-width: 768px) {
@@ -104,7 +116,9 @@
 	.elements-filters{
 		display: inline-block;
 	}
-
+	.basket__front{
+		width: 100vw;
+	}
 }
 
 @media (max-width: 560px) {

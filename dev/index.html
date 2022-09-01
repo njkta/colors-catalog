@@ -68,44 +68,27 @@
                     <div class="basket__box">
                         <div class="basket__back"></div>
                         <div class="basket__front">
-                            <div class="basket__header">
-                                <div class="basket__title">Корзина</div>
-                                <div class="basket__close">
-                                    <svg width="24" height="24">
-                                        <use xlink:href="#icon-close"></use>
-                                    </svg>
+                            <div>
+                                <div class="basket__header">
+                                    <div class="basket__title">Корзина</div>
+                                    <div class="basket__close">
+                                        <svg width="24" height="24">
+                                            <use xlink:href="#icon-close"></use>
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="basket__tool">
-                                <div class="basket__count_inner"><span class="basket__count" data-count="0"></span> товар(-ов)</div>
-                                <div class="basket__clear">очистить список</div>
-                            </div>
-                            <div class="basket-list">
-                                <!--<div class="basket-list__item">
-                                    <div class="basket-list__images">
-                                        <img class="basket-list__image" src="@@webRoot/img/item1.png">
-                                    </div>
-                                    <div class="basket-list__info">
-                                        <div class="catalog__title basket-list__title">Краска Wallquest, Brownsone MS90102</div>
-                                        <div class="catalog__price basket-list__price">6000 ₽</div>
-                                    </div>
-                                    <div class="basket-list__other">
-                                        <div class="basket-list__btn">
-                                            <span class="btn btn_small btn_minus"></span>
-                                            <span class="basket-list__counter">2</span>
-                                            <span class="btn btn_small btn_plus"></span>
-                                        </div>
-                                        <div class="basket-list__delete">
-                                            <svg width="24" height="24">
-                                                <use xlink:href="#icon-close"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>-->
+                                <div class="basket__tool">
+                                    <div class="basket__count_inner"><span class="basket__count" data-count="0"></span> товар(-ов)</div>
+                                    <div class="basket__clear">очистить список</div>
+                                </div>
+                                <div class="basket-list"></div>
                             </div>
                             <div class="basket__result">
-                                <div class="basket__price"></div>
-                                <div class="basket__order"></div>
+                                <div class="basket__price">
+                                    <div class="result">Итого</div>
+                                    <span><span data-result="0"></span>₽</span>
+                                </div>
+                                <div class="basket__order">Оформить заказ</div>
                             </div>
                         </div>
                     </div>
@@ -212,35 +195,35 @@
                 <div class="filter">
                     <div class="filter__back"></div>
                     <div class="filter__front">
-                        <label class="filter__name" data-filter=".new">
-                            <input class="filter__input" type="checkbox" name="filter" id="new">
+                        <label class="filter__name" data-filter="new">
+                            <input class="filter__input" type="radio" name="filter" id="new">
                             <span>Новинки</span>
                         </label>
-                        <label class="filter__name" data-filter=".in-stock">
-                            <input class="filter__input" type="checkbox" name="filter" id="in-stock">
+                        <label class="filter__name" data-filter="in-stock">
+                            <input class="filter__input" type="radio" name="filter" id="in-stock">
                             <span>Есть в наличии</span>
                         </label>
-                        <label class="filter__name" data-filter=".contractual">
-                            <input class="filter__input" type="checkbox" name="filter" id="contractual">
+                        <label class="filter__name" data-filter="contractual">
+                            <input class="filter__input" type="radio" name="filter" id="contractual">
                             <span>Контрактные</span>
                         </label>
-                        <label class="filter__name" data-filter=".exclusive">
-                            <input class="filter__input" type="checkbox" name="filter" id="exclusive">
+                        <label class="filter__name" data-filter="exclusive">
+                            <input class="filter__input" type="radio" name="filter" id="exclusive">
                             <span>Эксклюзивные</span>
                         </label>
-                        <label class="filter__name" data-filter=".sale">
-                            <input class="filter__input" type="checkbox" name="filter" id="sale">
+                        <label class="filter__name" data-filter="sale">
+                            <input class="filter__input" type="radio" name="filter" id="sale">
                             <span>Распродажа</span>
                         </label>
                     </div>
                 </div>
                 <div class="catalog">
                     <div class="catalog__tool">
-                        <div class="elements-count">412 товаров</div>
+                        <div class="elements-count"><span data-all-count=""></span> товаров</div>
                         <div class="elements-filters">Фильтры</div>
                         <div class="catalog-sort">
-                            <div class="catalog-sort__item catalog-sort__item_default">
-                                Сначала дорогие
+                            <div class="catalog-sort__item_default">
+                                <span>Сначала дорогие</span>
                                 <svg width="10" height="11" viewBox="0 0 10 11">
                                     <use xlink:href="#arrow-down"></use>
                                 </svg>
@@ -248,76 +231,76 @@
                             <div class="modal-sort">
                                 <div class="modal-sort__back"></div>
                                 <div class="modal-sort__content">
-                                    <div class="catalog-sort__item catalog-sort__item_active catalog-sort__item_high">Сначала дорогие</div>
-                                    <div class="catalog-sort__item catalog-sort__item_low">Сначала недорогие</div>
-                                    <div class="catalog-sort__item catalog-sort__item_popular">Сначала популярные</div>
-                                    <div class="catalog-sort__item catalog-sort__item_new">Сначала новые</div>
+                                    <div class="catalog-sort__item catalog-sort__item_active" data-sort="high">Сначала дорогие</div>
+                                    <div class="catalog-sort__item " data-sort="low">Сначала недорогие</div>
+                                    <div class="catalog-sort__item " data-sort="popular">Сначала популярные</div>
+                                    <div class="catalog-sort__item " data-sort="new">Сначала новые</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="catalog__items">
-                        <div class="catalog__item">
+                        <div id="1" class="catalog__item new">
                             <div class="catalog__content">
                                 <div class="catalog__images">
                                     <img class="catalog__image catalog__image_front" src="@@webRoot/img/item1.png">
                                     <img class="catalog__image catalog__image_back" src="@@webRoot/img/item1_back.png">
                                 </div>
-                                <div class="catalog__title">Краска Wallquest, Brownsone MS90102</div>
+                                <div class="catalog__title">1Краска Wallquest, Brownsone MS90102</div>
                                 <div class="catalog__other">
-                                    <div class="catalog__price">6000 ₽</div>
+                                    <div class="catalog__price"><span>6000</span> ₽</div>
                                     <button class="btn add-to-basket" type="button"></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog__item">
+                        <div id="2" class="catalog__item new in-stock">
                             <div class="catalog__content">
                                 <div class="catalog__images">
                                     <img class="catalog__image catalog__image_front" src="@@webRoot/img/item1.png">
                                     <img class="catalog__image catalog__image_back" src="@@webRoot/img/item1_back.png">
                                 </div>
-                                <div class="catalog__title">Краска Wallquest, Brownsone MS90102</div>
+                                <div class="catalog__title">2Краска Wallquest, Brownsone MS90102</div>
                                 <div class="catalog__other">
-                                    <div class="catalog__price">4800 ₽</div>
+                                    <div class="catalog__price"><span>4800</span> ₽</div>
                                     <button class="btn add-to-basket" type="button"></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog__item">
+                        <div id="3" class="catalog__item contractual">
                             <div class="catalog__content">
                                 <div class="catalog__images">
                                     <img class="catalog__image catalog__image_front" src="@@webRoot/img/item1.png">
                                     <img class="catalog__image catalog__image_back" src="@@webRoot/img/item1_back.png">
                                 </div>
-                                <div class="catalog__title">Краска Wallquest, Brownsone MS90102</div>
+                                <div class="catalog__title">3Краска Wallquest, Brownsone MS90102</div>
                                 <div class="catalog__other">
-                                    <div class="catalog__price">3500 ₽</div>
+                                    <div class="catalog__price"><span>3500</span> ₽</div>
                                     <button class="btn add-to-basket" type="button"></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog__item">
+                        <div id="4" class="catalog__item new exclusive">
                             <div class="catalog__content">
                                 <div class="catalog__images">
                                     <img class="catalog__image catalog__image_front" src="@@webRoot/img/item1.png">
                                     <img class="catalog__image catalog__image_back" src="@@webRoot/img/item1_back.png">
                                 </div>
-                                <div class="catalog__title">Краска Wallquest, Brownsone MS90102</div>
+                                <div class="catalog__title">4Краска Wallquest, Brownsone MS90102</div>
                                 <div class="catalog__other">
-                                    <div class="catalog__price">4000 ₽</div>
+                                    <div class="catalog__price"><span>4000</span> ₽</div>
                                     <button class="btn add-to-basket" type="button"></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog__item">
+                        <div id="5" class="catalog__item sale">
                             <div class="catalog__content">
                                 <div class="catalog__images">
                                     <img class="catalog__image catalog__image_front" src="@@webRoot/img/item1.png">
                                     <img class="catalog__image catalog__image_back" src="@@webRoot/img/item1_back.png">
                                 </div>
-                                <div class="catalog__title">Краска Wallquest, Brownsone MS90102</div>
+                                <div class="catalog__title">5Краска Wallquest, Brownsone MS90102</div>
                                 <div class="catalog__other">
-                                    <div class="catalog__price">5300 ₽</div>
+                                    <div class="catalog__price"><span>5300</span> ₽</div>
                                     <button class="btn add-to-basket" type="button"></button>
                                 </div>
                             </div>
